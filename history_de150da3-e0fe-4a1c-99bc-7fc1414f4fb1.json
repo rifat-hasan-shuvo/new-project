@@ -1,0 +1,9 @@
+[
+    {
+        "id": "c638a62f-dccd-4761-8401-a9ae5afa2cde",
+        "result": "\n=== IP Geolocation Lookup ===\n\ud83d\udcca Scan Results\n\u2705 Resolved IP: 142.250.205.78\n\ud83d\udccd Basic Information:\n\u2022 Hostname: pnmaaa-ar-in-f14.1e100.net\n\u2022 Organization: Google LLC\n\u2022 Network: GOOGLE\n\u2022 Country: US\n\u2022 City: Mountain View\n\ud83d\udef0\ufe0f ASN & Network Info:\n\u2022 ASN: N/A\n\u2022 CIDR: 142.250.0.0/15\n\ud83d\udcec Abuse Contact:\n\u2022 Email: arin-contact@google.com\n\ud83d\udee1\ufe0f Security Analysis:\n\u2022 No obvious security flags\n\ud83d\udcc5 Registration Info:\n\u2022 Created: 2012-05-24\n\n\u2705 Completed: IP Geolocation Lookup\n\n=== SSL Certificate Check ===\n\ud83d\udd0d Certificate Subject: *.google.com\n\ud83d\udd0d Certificate Issuer: WE2\n\ud83d\udcc5 Valid From: 2025-03-31 08:54:37\n\ud83d\udcc5 Valid Until: 2025-06-23 08:54:36\n\ud83d\udd16 Days Until Expiry: 52 days\n\u2705 SSL Certificate is valid.\n\ud83d\udd10 Cipher: TLS_AES_256_GCM_SHA384 with strength TLSv1.3 bits\n\ud83d\udcdc TLS Version: TLSv1.3\n\u26a0\ufe0f Certificate Chain Validation failed: get_server_certificate() got an unexpected keyword argument 'ssl_context'\n\ud83d\udd12 (Advanced) Checking certificate revocation status... (Not Implemented)\n\n\u2705 Completed: SSL Certificate Check\n",
+        "scan_type": "custom",
+        "timestamp": "2025-05-01 14:32:56",
+        "website": "https://youtube.com"
+    }
+]

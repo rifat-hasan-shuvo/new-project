@@ -1,0 +1,23 @@
+[
+    {
+        "id": "7a9949c6-ad6c-4efb-a34d-56c73b165987",
+        "result": "\n=== Subdomain Finder ===\n\ud83d\udd0d Subdomain Scanner Report:\n\ud83d\udce1 DNS Resolved Subdomains: 185\n\ud83d\udd12 HTTPS Available: 8\n\ud83c\udf10 HTTP Available : 8\n\ud83d\udd12 HTTPS Subdomains:\n   \u2705 https://www.facebook.com\n   \u2705 https://secure.facebook.com\n   \u2705 https://m.facebook.com\n   \u2705 https://shop.facebook.com\n   \u2705 https://beta.facebook.com\n   \u2705 https://alpha.facebook.com\n   \u2705 https://api.facebook.com\n   \u2705 https://blog.facebook.com\n\ud83c\udf10 HTTP Subdomains:\n   \u26a0\ufe0f  http://secure.facebook.com\n   \u26a0\ufe0f  http://www.facebook.com\n   \u26a0\ufe0f  http://m.facebook.com\n   \u26a0\ufe0f  http://shop.facebook.com\n   \u26a0\ufe0f  http://beta.facebook.com\n   \u26a0\ufe0f  http://alpha.facebook.com\n   \u26a0\ufe0f  http://api.facebook.com\n   \u26a0\ufe0f  http://blog.facebook.com\n\u2705 Scan completed.\n\n\u2705 Completed: Subdomain Finder\n",
+        "scan_type": "custom",
+        "timestamp": "2025-04-28 20:53:39",
+        "website": "https://facebook.com"
+    },
+    {
+        "id": "52a59eb7-2c07-4425-831e-3bf702ec4f08",
+        "result": "\n=== IP Geolocation Lookup ===\n\ud83d\udcca Scan Results\n\u2705 Resolved IP: 96.7.128.175\n\ud83d\udccd Basic Information:\n\u2022 Hostname: a96-7-128-175.deploy.static.akamaitechnologies.com\n\u2022 Organization: Akamai Technologies, Inc.\n\u2022 Network: AKAMAI-200703\n\u2022 Country: US\n\u2022 City: Cambridge\n\ud83d\udef0\ufe0f ASN & Network Info:\n\u2022 ASN: N/A\n\u2022 CIDR: 96.6.0.0/15\n\ud83d\udcec Abuse Contact:\n\u2022 Email: ip-admin@akamai.com\n\ud83d\udee1\ufe0f Security Analysis:\n\u2022 No obvious security flags\n\ud83d\udcc5 Registration Info:\n\u2022 Created: 2007-03-14\n\n\u2705 Completed: IP Geolocation Lookup\n",
+        "scan_type": "custom",
+        "timestamp": "2025-04-28 20:53:45",
+        "website": "https://example.com"
+    },
+    {
+        "id": "7af23b70-cbb0-4598-8795-cc9abe4a6fc4",
+        "result": "\n=== SSL Certificate Check ===\n\ud83d\udd0d Certificate Subject: *.example.com\n\ud83d\udd0d Certificate Issuer: DigiCert Global G3 TLS ECC SHA384 2020 CA1\n\ud83d\udcc5 Valid From: 2025-01-15 00:00:00\n\ud83d\udcc5 Valid Until: 2026-01-15 23:59:59\n\ud83d\udd16 Days Until Expiry: 262 days\n\u2705 SSL Certificate is valid.\n\ud83d\udd10 Cipher: TLS_AES_256_GCM_SHA384 with strength TLSv1.3 bits\n\ud83d\udcdc TLS Version: TLSv1.3\n\u26a0\ufe0f Certificate Chain Validation failed: get_server_certificate() got an unexpected keyword argument 'ssl_context'\n\ud83d\udd12 (Advanced) Checking certificate revocation status... (Not Implemented)\n\n\u2705 Completed: SSL Certificate Check\n",
+        "scan_type": "custom",
+        "timestamp": "2025-04-28 21:44:26",
+        "website": "https://example.com"
+    }
+]

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        pre { 
+            background: #f8f9fa; 
+            padding: 20px; 
+            border-radius: 10px; 
+            white-space: pre-wrap; 
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+        .card {
+            border: 1px solid #dee2e6;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        h1 { 
+            font-size: 1.5rem; 
+            color: #2b6cb0; 
+            margin-bottom: 20px;
+        }
+        .metadata {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Scan Results for {{ website }}</h1>
+        <div class="metadata">
+            <div><strong>Scan Type:</strong> {{ scan_type|title }} Scan</div>
+            <div><strong>Date:</strong> {{ timestamp }}</div>
+        </div>
+        <pre>{{ result }}</pre>
+    </div>
+</body>
+</html>

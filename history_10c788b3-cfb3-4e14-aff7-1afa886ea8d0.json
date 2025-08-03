@@ -1,0 +1,9 @@
+[
+    {
+        "id": "de5b5559-c426-4f67-a104-19609b4ce60b",
+        "result": "\n=== DDoS Attack Check ===\nDDoS Protection Check for: https://facebook.com\n\ud83c\udf10 IP Address: 157.240.1.35\n\u23f1 Response Time: 0.83 seconds\n\u26a0\ufe0f Website has a **highly optimized traffic control system** \u2014 very likely protected by advanced DDoS mitigation tools.\n\ud83d\udcf6 HTTP Status Code: 200\n\n\u2705 Completed: DDoS Attack Check\n",
+        "scan_type": "custom",
+        "timestamp": "2025-04-28 21:49:48",
+        "website": "https://facebook.com"
+    }
+]

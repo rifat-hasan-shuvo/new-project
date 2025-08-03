@@ -1,0 +1,9 @@
+[
+    {
+        "id": "2c2dcca3-f342-4c9f-9d9d-1a8a9c571e47",
+        "result": "\n=== SSL Certificate Check ===\n\ud83d\udd0d Certificate Subject: dazzle.com.bd\n\ud83d\udd0d Certificate Issuer: WE1\n\ud83d\udcc5 Valid From: 2025-03-26 10:01:50\n\ud83d\udcc5 Valid Until: 2025-06-24 10:58:55\n\ud83d\udd16 Days Until Expiry: 56 days\n\u2705 SSL Certificate is valid.\n\ud83d\udd10 Cipher: TLS_AES_256_GCM_SHA384 with strength TLSv1.3 bits\n\ud83d\udcdc TLS Version: TLSv1.3\n\u26a0\ufe0f Certificate Chain Validation failed: get_server_certificate() got an unexpected keyword argument 'ssl_context'\n\ud83d\udd12 (Advanced) Checking certificate revocation status... (Not Implemented)\n\n\u2705 Completed: SSL Certificate Check\n",
+        "scan_type": "custom",
+        "timestamp": "2025-04-29 10:45:09",
+        "website": "https://dazzle.com.bd"
+    }
+]

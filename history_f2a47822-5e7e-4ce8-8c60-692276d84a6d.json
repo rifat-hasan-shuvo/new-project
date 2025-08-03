@@ -1,0 +1,9 @@
+[
+    {
+        "id": "53222ddc-f5e4-41d2-9782-4305f0ed692b",
+        "result": "\n=== IP Geolocation Lookup ===\n\ud83d\udcca Scan Results\n\u2705 Resolved IP: 52.94.236.248\n\ud83d\udccd Basic Information:\n\u2022 Hostname: N/A\n\u2022 Organization: Amazon Technologies Inc.\n\u2022 Network: AT-88-Z\n\u2022 Country: US\n\u2022 City: Seattle\n\ud83d\udef0\ufe0f ASN & Network Info:\n\u2022 ASN: N/A\n\u2022 CIDR: 52.88.0.0/13, 52.84.0.0/14\n\ud83d\udcec Abuse Contact:\n\u2022 Email: trustandsafety@support.aws.com\n\ud83d\udee1\ufe0f Security Analysis:\n\u2022 No obvious security flags\n\ud83d\udcc5 Registration Info:\n\u2022 Created: 1991-12-19\n\n\u2705 Completed: IP Geolocation Lookup\n\n=== SSL Certificate Check ===\n\ud83d\udd0d Certificate Subject: *.peg.a2z.com\n\ud83d\udd0d Certificate Issuer: DigiCert Global CA G2\n\ud83d\udcc5 Valid From: 2025-06-19 00:00:00\n\ud83d\udcc5 Valid Until: 2026-05-28 23:59:59\n\ud83d\udd16 Days Until Expiry: 336 days\n\u2705 SSL Certificate is valid.\n\ud83d\udd10 Cipher: TLS_AES_128_GCM_SHA256 with strength TLSv1.3 bits\n\ud83d\udcdc TLS Version: TLSv1.3\n\u26a0\ufe0f Certificate Chain Validation failed: get_server_certificate() got an unexpected keyword argument 'ssl_context'\n\ud83d\udd12 (Advanced) Checking certificate revocation status... (Not Implemented)\n\n\u2705 Completed: SSL Certificate Check\n",
+        "scan_type": "custom",
+        "timestamp": "2025-06-26 12:22:55",
+        "website": "https://amazon.com"
+    }
+]

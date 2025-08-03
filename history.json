@@ -1,0 +1,37 @@
+[
+    {
+        "id": "4bca80fa-eba9-43a1-8a5e-20355320442c",
+        "website": "https://amazon.com",
+        "timestamp": "2025-04-28 18:14:53",
+        "result": "\n=== SSL Certificate Check ===\n\ud83d\udd0d Certificate Subject: *.peg.a2z.com\n\ud83d\udd0d Certificate Issuer: DigiCert Global CA G2\n\ud83d\udcc5 Valid From: 2024-08-26 00:00:00\n\ud83d\udcc5 Valid Until: 2025-07-27 23:59:59\n\ud83d\udd16 Days Until Expiry: 90 days\n\u2705 SSL Certificate is valid.\n\ud83d\udd10 Cipher: TLS_AES_128_GCM_SHA256 with strength TLSv1.3 bits\n\ud83d\udcdc TLS Version: TLSv1.3\n\u26a0\ufe0f Certificate Chain Validation failed: get_server_certificate() got an unexpected keyword argument 'ssl_context'\n\ud83d\udd12 (Advanced) Checking certificate revocation status... (Not Implemented)\n\n\u2705 Completed: SSL Certificate Check\n",
+        "scan_type": "custom"
+    },
+    {
+        "id": "8264862d-2f24-40dc-a2f6-4f824f701ca8",
+        "website": "https://dazzle.com.bd",
+        "timestamp": "2025-04-28 18:16:47",
+        "result": "\n=== IP Geolocation Lookup ===\n\ud83d\udcca Scan Results\n\u2705 Resolved IP: 172.67.138.196\n\ud83d\udccd Basic Information:\n\u2022 Hostname: N/A\n\u2022 Organization: Cloudflare, Inc.\n\u2022 Network: CLOUDFLARENET\n\u2022 Country: US\n\u2022 City: San Francisco\n\ud83d\udef0\ufe0f ASN & Network Info:\n\u2022 ASN: N/A\n\u2022 CIDR: 172.64.0.0/13\n\ud83d\udcec Abuse Contact:\n\u2022 Email: abuse@cloudflare.com\n\ud83d\udee1\ufe0f Security Analysis:\n\u2022 Potential VPN/Proxy detected\n\ud83d\udcc5 Registration Info:\n\u2022 Created: 2015-02-25\n\n\u2705 Completed: IP Geolocation Lookup\n\n=== SSL Certificate Check ===\n\ud83d\udd0d Certificate Subject: dazzle.com.bd\n\ud83d\udd0d Certificate Issuer: WE1\n\ud83d\udcc5 Valid From: 2025-03-26 10:01:50\n\ud83d\udcc5 Valid Until: 2025-06-24 10:58:55\n\ud83d\udd16 Days Until Expiry: 56 days\n\u2705 SSL Certificate is valid.\n\ud83d\udd10 Cipher: TLS_AES_256_GCM_SHA384 with strength TLSv1.3 bits\n\ud83d\udcdc TLS Version: TLSv1.3\n\u26a0\ufe0f Certificate Chain Validation failed: get_server_certificate() got an unexpected keyword argument 'ssl_context'\n\ud83d\udd12 (Advanced) Checking certificate revocation status... (Not Implemented)\n\n\u2705 Completed: SSL Certificate Check\n",
+        "scan_type": "custom"
+    },
+    {
+        "id": "d70b23f5-ebbb-4442-8bdb-d644c27d0b2b",
+        "website": "https://facebook.com",
+        "timestamp": "2025-04-28 18:18:41",
+        "result": "\n=== Technology Detection ===\n\ud83d\udd0d Technology Detection Report for https://facebook.com\n\ud83d\udd52 Scan started at: 2025-04-28 18:18:31\n\ud83d\udee1\ufe0f Security Headers:\n  \u2022 Content Security Policy: \u2705 Present (default-src blob: 'self' https://*.fbsbx.com *.facebook.com *.fbcdn.net)\n  \u2022 HTTP Strict Transport Security: \u2705 Present (max-age=15552000)\n  \u2022 X-Content-Type-Options: \u2705 Present (nosniff)\n  \u2022 X-Frame-Options: \u2705 Present (DENY)\n  \u2022 X-XSS-Protection: \u2705 Present (0)\n\ud83d\udda5\ufe0f Server Information:\n  \u2022 Server: Not detected\n  \u2022 Powered By: Not detected\n\ud83d\udce6 CMS Detection:\n\u26a0\ufe0f No CMS detected\n\u269b\ufe0f JavaScript Frameworks:\n\u2705 Detected Frameworks:\n  \u2022 jQuery\n  \u2022 Angular\n  \u2022 Bootstrap\n\ud83d\udcb0 E-commerce & Payment:\n\u26a0\ufe0f No payment processors detected\n\u2601\ufe0f Cloud Providers:\n\u26a0\ufe0f No cloud providers detected\n\ud83d\udcca Analytics & Marketing:\n\u26a0\ufe0f No analytics tools detected\n\u23f1\ufe0f Scan completed in 3.96 seconds\n\n\u2705 Completed: Technology Detection\n",
+        "scan_type": "custom"
+    },
+    {
+        "id": "68c10c2a-4c34-406a-8206-649d4eebc8a6",
+        "website": "https://amazon.com",
+        "timestamp": "2025-04-28 18:19:53",
+        "result": "\n=== Port Scan ===\n\ud83d\udd0d Scanning common ports...\n\ud83d\udd34 Port 21 (FTP) is CLOSED\n\ud83d\udd34 Port 22 (SSH) is CLOSED\n\ud83d\udd34 Port 23 (Telnet) is CLOSED\n\ud83d\udd34 Port 25 (SMTP) is CLOSED\n\ud83d\udd34 Port 53 (DNS) is CLOSED\n\ud83d\udfe2 Port 80 (HTTP) is OPEN\n\ud83d\udd34 Port 110 (POP3) is CLOSED\n\ud83d\udd34 Port 143 (IMAP) is CLOSED\n\ud83d\udfe2 Port 443 (HTTPS) is OPEN\n\ud83d\udd34 Port 3306 (MySQL) is CLOSED\n\ud83d\udd34 Port 8080 (HTTP-Alt) is CLOSED\n\n\u2705 Completed: Port Scan\n",
+        "scan_type": "custom"
+    },
+    {
+        "id": "c1db6bb9-99fa-432e-9054-12ffd10528ae",
+        "website": "https://example.com",
+        "timestamp": "2025-04-28 20:41:03",
+        "result": "\n=== SSL Certificate Check ===\n\ud83d\udd0d Certificate Subject: *.example.com\n\ud83d\udd0d Certificate Issuer: DigiCert Global G3 TLS ECC SHA384 2020 CA1\n\ud83d\udcc5 Valid From: 2025-01-15 00:00:00\n\ud83d\udcc5 Valid Until: 2026-01-15 23:59:59\n\ud83d\udd16 Days Until Expiry: 262 days\n\u2705 SSL Certificate is valid.\n\ud83d\udd10 Cipher: TLS_AES_256_GCM_SHA384 with strength TLSv1.3 bits\n\ud83d\udcdc TLS Version: TLSv1.3\n\u26a0\ufe0f Certificate Chain Validation failed: get_server_certificate() got an unexpected keyword argument 'ssl_context'\n\ud83d\udd12 (Advanced) Checking certificate revocation status... (Not Implemented)\n\n\u2705 Completed: SSL Certificate Check\n",
+        "scan_type": "custom"
+    }
+]

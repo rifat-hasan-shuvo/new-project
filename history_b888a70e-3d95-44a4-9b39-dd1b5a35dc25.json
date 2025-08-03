@@ -1,0 +1,9 @@
+[
+    {
+        "id": "914df7b8-70ae-4875-84b5-1bc73930f703",
+        "result": "\n=== IP Geolocation Lookup ===\n\ud83d\udcca Scan Results\n\u2705 Resolved IP: 13.248.240.135\n\ud83d\udccd Basic Information:\n\u2022 Hostname: ab2c03c0cf361bdb8.awsglobalaccelerator.com\n\u2022 Organization: Amazon Technologies Inc.\n\u2022 Network: AT-88-Z\n\u2022 Country: US\n\u2022 City: Seattle\n\ud83d\udef0\ufe0f ASN & Network Info:\n\u2022 ASN: N/A\n\u2022 CIDR: 13.248.0.0/14, 13.244.0.0/14\n\ud83d\udcec Abuse Contact:\n\u2022 Email: aws-routing-poc@amazon.com\n\ud83d\udee1\ufe0f Security Analysis:\n\u2022 Amazon Web Services detected\n\ud83d\udcc5 Registration Info:\n\u2022 Created: 2018-07-11\n\n\u2705 Completed: IP Geolocation Lookup\n\n=== SSL Certificate Check ===\n\ud83d\udd0d Certificate Subject: w3schools.com\n\ud83d\udd0d Certificate Issuer: Amazon RSA 2048 M02\n\ud83d\udcc5 Valid From: 2025-03-02 00:00:00\n\ud83d\udcc5 Valid Until: 2026-03-31 23:59:59\n\ud83d\udd16 Days Until Expiry: 331 days\n\u2705 SSL Certificate is valid.\n\ud83d\udd10 Cipher: ECDHE-RSA-AES128-GCM-SHA256 with strength TLSv1.2 bits\n\ud83d\udcdc TLS Version: TLSv1.2\n\u26a0\ufe0f Certificate Chain Validation failed: get_server_certificate() got an unexpected keyword argument 'ssl_context'\n\ud83d\udd12 (Advanced) Checking certificate revocation status... (Not Implemented)\n\n\u2705 Completed: SSL Certificate Check\n",
+        "scan_type": "custom",
+        "timestamp": "2025-05-04 11:32:31",
+        "website": "https://w3schools.com"
+    }
+]

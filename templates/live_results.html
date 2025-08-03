@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        pre { 
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            max-height: 500px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+        .scanning-animation {
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .result-line {
+            animation: fadeIn 0.3s ease-out;
+            margin: 3px 0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            background: rgba(0,0,0,0.03);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .btn-stop-scan {
+            background-color: #0c5460;
+            border-color: #0a4550;
+            color: white !important;
+            padding: 5px 12px;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            margin-left: 15px;
+        }
+        .btn-stop-scan:hover {
+            background-color: #08303a;
+            border-color: #06242c;
+        }
+        .btn-stop-scan:disabled {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            opacity: 0.7;
+        }
+        .btn-stop-scan i {
+            color: white !important;
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="card p-4">
+            <h1 class="mb-4">🔍 Live Scanning Progress</h1>
+            <div class="scanning-animation mb-4">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%"></div>
+                </div>
+            </div>
+            <div id="current-status" class="alert alert-info mb-3 d-flex justify-content-between align-items-center">
+                <div><strong>Current Status:</strong> <span id="status-text">Initializing...</span></div>
+                <button id="stop-scan-btn" class="btn btn-stop-scan">
+                    <i class="fas fa-stop"></i>Stop Scan
+                </button>
+            </div>
+            <pre id="live-results" class="mb-3"></pre>
+
+            <div id="complete-message" class="text-center d-none">
+                <div class="alert alert-success mb-3">🎉 Scan Completed Successfully!</div>
+                <div class="d-flex gap-2 justify-content-center">
+                    <a href="/" class="btn btn-primary">🏠 Back to Scanner</a>
+                    <form action="/save_pdf" method="POST">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                        <input type="hidden" name="pdf_content" id="pdf-content">
+                        <input type="hidden" name="website" id="pdf-website">
+                        <input type="hidden" name="timestamp" id="pdf-timestamp">
+                        <input type="hidden" name="scan_type" id="pdf-scan-type">
+                        <button type="submit" class="btn btn-danger">📄 Save as PDF</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+    <script>
+        const scanId = "{{ scan_id }}";
+        const eventSource = new EventSource(`/scan_progress/${scanId}`);
+        const resultsPre = document.getElementById('live-results');
+        let previousResult = '';
+
+        document.getElementById('stop-scan-btn').addEventListener('click', async () => {
+            const btn = document.getElementById('stop-scan-btn');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Stopping...';
+            btn.disabled = true;
+            
+            try {
+                const response = await fetch(`/stop_scan/${scanId}`, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': "{{ csrf_token() }}"
+                    }
+                });
+                
+                // Only hide the button, not the entire status section
+                document.getElementById('complete-message').classList.remove('d-none');
+                document.querySelector('#complete-message .alert').textContent = '⏹ Scan Stopped by User';
+            } catch (error) {
+                console.error('Stop failed:', error);
+                btn.innerHTML = '<i class="fas fa-times"></i> Stop Failed';
+            }
+        });
+
+        eventSource.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            
+            document.getElementById('status-text').textContent = data.status;
+
+            if(data.result && data.result !== previousResult) {
+                const newContent = data.result;
+                const diff = newContent.replace(previousResult, '');
+                
+                diff.split('\n').forEach(line => {
+                    if(line.trim()) {
+                        const div = document.createElement('div');
+                        div.className = 'result-line';
+                        div.textContent = line;
+                        resultsPre.appendChild(div);
+                    }
+                });
+                
+                resultsPre.scrollTop = resultsPre.scrollHeight;
+                previousResult = newContent;
+            }
+
+            if(data.status.includes('Complete') || data.status.includes('Stopped')) {
+                eventSource.close();
+                // Only disable the button instead of hiding status section
+                const btn = document.getElementById('stop-scan-btn');
+                btn.disabled = true;
+                btn.innerHTML = '<i class="fas fa-stop"></i> Scan Stopped';
+                document.getElementById('complete-message').classList.remove('d-none');
+                // Set PDF values
+                document.getElementById('pdf-content').value = data.result;
+                document.getElementById('pdf-timestamp').value = new Date().toLocaleString();
+                document.getElementById('pdf-website').value = data.website;
+                document.getElementById('pdf-scan-type').value = data.scan_type;
+            }
+        };
+    </script>
+</body>
+</html>
